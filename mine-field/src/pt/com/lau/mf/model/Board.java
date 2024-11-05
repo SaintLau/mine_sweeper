@@ -99,9 +99,22 @@ public class Board {
 		
 		StringBuilder sb = new StringBuilder();
 		
+		// adicionar os indices das colunas:
+		sb.append("  "); // to align with board column
+		for (int columns = 0;  columns < amountColumns; columns++) {
+			sb.append(" " );
+			sb.append(columns);
+			sb.append(" " );
+		}
+		sb.append("\n");
+
+		// rows:
 		int i = 0;
-		
 		for(int r = 0; r < amountRows;  r++) {
+			// add row number:
+			sb.append(r);
+			sb.append(" ");
+			// columns
 			for(int c = 0; c < amountColumns; c++) {
 				sb.append(" ");
 				sb.append(squares.get(i));
